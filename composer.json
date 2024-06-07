@@ -27,7 +27,6 @@
         "jms/serializer": ">=3.22"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
         "symfony/var-dumper": "^5.4"
     }
 }

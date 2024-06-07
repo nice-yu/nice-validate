@@ -12,3 +12,4 @@ composer.phar
 # Test
 index.php
 test.php
+tests/*
