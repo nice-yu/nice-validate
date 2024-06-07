@@ -1,0 +1,33 @@
+{
+    "name": "nice-yu/nice-validate",
+    "description": "Verify and filter request parameters by loading classes",
+    "keywords": ["Verify","request","parameters","Verify parameters","request parameters"],
+    "homepage": "https://github.com/nice-yu/nice-validate",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nice-yu",
+            "email": "nice-yu@qq.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "NiceYu\\Validate\\":"./src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NiceYu\\Tests\\Validate\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "jms/serializer": ">=3.22"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "symfony/var-dumper": "^5.4"
+    }
+}
