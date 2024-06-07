@@ -10,15 +10,15 @@ class Parameters
 {
     /**
      * Request method
-     * @var string|null
+     * @var string
      */
-    protected ?string $method = null;
+    private string $method;
 
     /**
      * Request params
-     * @var array|null
+     * @var array
      */
-    public ?array $params = null;
+    private array $params;
 
     /**
      * class construct
@@ -40,9 +40,9 @@ class Parameters
 
     /**
      * get params
-     * @return array|null
+     * @return array
      */
-    private function getParameters(): ?array
+    private function getParameters(): array
     {
         $content = file_get_contents('php://input');
         $contentType = $_SERVER['CONTENT_TYPE'];
@@ -64,7 +64,7 @@ class Parameters
         if (false !== strpos($contentType, 'json')) {
             $params =  (array) json_decode($content, true);
             if (json_last_error() !== JSON_ERROR_NONE) {
-                $params = null;
+                $params = [];
             }
             return $params;
         }
@@ -100,6 +100,6 @@ class Parameters
             }
             return $params;
         }
-        return null;
+        return [];
     }
 }
